@@ -1,0 +1,2 @@
+rootProject.name='BallBadmintonScorer'
+include ':app'

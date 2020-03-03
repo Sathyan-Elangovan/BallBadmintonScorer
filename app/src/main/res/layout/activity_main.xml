@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="75dp"
+        android:text="Team A"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="50dp"
+        android:text="Team B"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/pointsA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="1dp"
+        android:text="POINTS"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/PointsAvalue"
+        app:layout_constraintEnd_toStartOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/PointsAvalue"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/TA" />
+
+
+    <TextView
+        android:id="@+id/PointsB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="POINTS"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/PointsBvalue"
+        app:layout_constraintStart_toEndOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/PointsBvalue"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/foulsB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="FOULS"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/foulsBvalue"
+        app:layout_constraintStart_toEndOf="@+id/view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="98dp"
+        android:text="FOULS"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/foulsAvalue"
+        app:layout_constraintEnd_toStartOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/foulsAvalue"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/PointsAvalue" />
+
+    <TextView
+        android:id="@+id/foulsBvalue"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="50sp"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/PointsBvalue" />
+
+    <Button
+        android:id="@+id/addpointA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="76dp"
+        android:text="POINT"
+        android:onClick="addPointA"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/foulsAvalue" />
+
+    <Button
+        android:id="@+id/addpointB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="40dp"
+        android:text="POINT"
+        android:onClick="addPointB"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/foulsBvalue" />
+
+    <Button
+        android:id="@+id/addfoulA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="77dp"
+        android:text="FOUL"
+        android:onClick="addFoulA"
+        android:background="@android:color/holo_orange_light"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/addpointA" />
+
+    <Button
+        android:id="@+id/addfoulB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="20dp"
+        android:text="FOUL"
+        android:onClick="addxFoulB"
+        android:background="@android:color/holo_orange_light"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/addpointB" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="11dp"
+        android:text="RESET"
+        android:onClick="resetpoints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="40dp"
+        android:text="Result"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+
+        android:id="@+id/resultofmatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/result" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >
